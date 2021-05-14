@@ -77,7 +77,7 @@ export const appSlice = createSlice({
   name: 'app',
   initialState: {
     //Initial state here
-    productId: 18078,
+    productId: 4500,
     productInfo: {},
     reviews: [],
     reviewMetadata: {},

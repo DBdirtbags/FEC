@@ -5,7 +5,25 @@ export const fetchStyleInfo = createAsyncThunk(
   'products/getStyleInfo',
   async (productId, thunkAPI) => {
     const response = await axios.get(`/api/?endpoint=products/${productId}/styles`);
-    return response.data;
+
+    let formattedData = [...response.data];
+    formattedData.forEach((element, index) => {
+      let currentSkus = element.skus;
+      let newSkus = {};
+
+      currentSkus.forEach((sku) => {
+        newSkus[sku.sku_id] = { size: sku.size, quantity: sku.quantity };
+      });
+
+      element.skus = newSkus;
+    });
+
+    let dataObj = {
+      product_id: productId,
+      results: formattedData
+    };
+
+    return dataObj;
   }
 );
 

@@ -55,7 +55,7 @@ export const fetchRelated = createAsyncThunk(
       .then((itemInfoArray) => {
         let promiseArray = [];
         itemInfoArray.map((item, index) => {
-          promiseArray[index] = (generateRelatedStylePromise(item.id));
+          promiseArray[index] = (generateRelatedStylePromise(item.product_id));
         });
         return promiseArray;
       })
@@ -64,8 +64,8 @@ export const fetchRelated = createAsyncThunk(
       })
       .then((resolvedStylePromises) => {
         resolvedStylePromises.map((item, index) => {
-          if (item.data.results[0].photos[0].thumbnail_url) {
-            itemInfo[index].photo = item.data.results[0].photos[0].url;
+          if (item.data[0].photos[0].thumbnail_url) {
+            itemInfo[index].photo = item.data[0].photos[0].url;
           } else {
             itemInfo[index].photo = "/assets/imgPlaceholder.jpeg";
           }
@@ -75,7 +75,7 @@ export const fetchRelated = createAsyncThunk(
       .then((itemInfoArray) => {
         let promiseArray = [];
         itemInfoArray.map((item, index) => {
-          promiseArray[index] = (generateRelatedReviewMetaDataPromise(item.id));
+          promiseArray[index] = (generateRelatedReviewMetaDataPromise(item.product_id));
         });
         return promiseArray;
       })

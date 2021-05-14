@@ -42,6 +42,7 @@ const GalleryNav = (props) => {
   const visiblePhotos = useSelector((state) => state.gallery.visibleSteps);
 
   useEffect(() => {
+    console.log(currentStyle);
     if (currentStyle.photos[activeStep] && currentStyle.photos[activeStep].url) {
       dispatch(setCurrentPhoto(currentStyle.photos[activeStep]));
       let pics = JSON.parse(JSON.stringify(currentStyle.photos));
@@ -49,6 +50,9 @@ const GalleryNav = (props) => {
         item.index = index;
       });
       dispatch(setStylePhotos(pics));
+    } else {
+      // dispatch(setCurrentPhoto({url: '/assets/imgPlaceholder.jpeg', thumbnail_url: '/assets/imgPlaceholder.jpeg'}))
+      // dispatch(setStylePhotos([{url: '/assets/imgPlaceholder.jpeg', thumbnail_url: '/assets/imgPlaceholder.jpeg'}]));
     }
   }, [currentStyle]);
 

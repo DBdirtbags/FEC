@@ -67,7 +67,7 @@ const ProductInformation = (props) => {
           </span>
         </Grid>
         <Grid item data-testid="price">
-          {(currentStyle) && currentStyle.sale_price ?
+          {(currentStyle) && (currentStyle.sale_price !== "null")?
             <div>
               <span style ={{ color: 'red' }}>
                 <b>SALE </b> ${currentStyle.sale_price} &nbsp;

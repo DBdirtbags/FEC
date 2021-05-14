@@ -53,10 +53,8 @@ const RealtedProductCard = ({ productInfo }) => {
     <div >
       <GridListTile style={{
         position: 'relative',
-        minWidth: '20px',
-        maxWidth: '700px',
-        minHeight: '20px',
-        maxHeight: '450px'
+        width: '400px',
+        height: '300px'
       }}>
         <img
           alt={`${productInfo.name}`}
@@ -65,13 +63,11 @@ const RealtedProductCard = ({ productInfo }) => {
           style={{
             position: 'top',
             width: '100% !important',
-            maxHeight: '400px',
-            maxWidth: '664px',
             overflow: 'hidden',
-            height: '100%'
+            objectFit: 'contain'
           }}
           onClick={() => {
-            dispatch(changeProductId(productInfo.id));
+            dispatch(changeProductId(productInfo.product_id));
             dispatch(countProductCardClick());
           }}/>
         <GridListTileBar

@@ -32,7 +32,7 @@ const GalleryMainImg = (props) => {
         <img
           alt="main product photo"
           onClick={() => dispatch(expandView(true))}
-          src={currentPhoto.url}
+          src={currentPhoto.thumbnail_url}
           style={{
             cursor: "zoom-in",
             objectFit: "cover",

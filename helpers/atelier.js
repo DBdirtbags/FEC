@@ -1,8 +1,8 @@
 const axios = require('axios');
 const config = require('../APIconfig');
 let API_URL = 'http://app-hrsei-api.herokuapp.com/api/fec2/hr-bld';
-let qaEndpoint = '';
-let productEndpoint = '';
+let qaEndpoint = 'http://qa-lb-168771840.us-east-2.elb.amazonaws.com';
+let productEndpoint = 'http://load-balancer-3000-3921421.us-east-2.elb.amazonaws.com';
 
 const getEndpoint = (endpoint, callback) => {
   if (endpoint.includes('questions') || endpoint.includes('answers')) {

@@ -33,14 +33,13 @@ const RelatedProductsList = () => {
     dispatch(fetchRelated(productId));
   }, [productId]);
 
-
   if (relatedList.length > 0) {
     return (
       <div data-testid="relatedProductsList" className={classes.root}>
         <GridList className={classes.gridList} >
-          {relatedList.map((product) => {
+          {relatedList.map((product, index) => {
             return (
-              < RelatedProductCard key={product.id} productInfo={product}/>
+              < RelatedProductCard key={`${product.id} ${index}`} productInfo={product}/>
             );
           }
           )}

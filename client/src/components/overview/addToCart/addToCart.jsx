@@ -35,7 +35,7 @@ const AddToCart = (props) => {
 
   if (style) {
     editedProductInfo.ratings = ratings;
-    editedProductInfo.photo = style.photos[0].url;
+    editedProductInfo.photo = style.photos[0].thumbnail_url;
   }
 
   const addToCart = (sku) => {

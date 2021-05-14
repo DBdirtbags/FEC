@@ -9,7 +9,7 @@ export const outfitSlice = createSlice({
   reducers: {
     addToOutfit: (state, action) => {
       state.outfitObjects.push(action.payload);
-      state.outfitIds.push(action.payload.id);
+      state.outfitIds.push(action.payload.product_id);
     },
     removeFromOutfit: (state, action) => {
       state.outfitObjects.splice(action.payload, 1);

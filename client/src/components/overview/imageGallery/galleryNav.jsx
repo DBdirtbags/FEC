@@ -42,7 +42,7 @@ const GalleryNav = (props) => {
   const visiblePhotos = useSelector((state) => state.gallery.visibleSteps);
 
   useEffect(() => {
-    console.log(currentStyle);
+    // console.log(currentStyle);
     if (currentStyle.photos[activeStep] && currentStyle.photos[activeStep].url) {
       dispatch(setCurrentPhoto(currentStyle.photos[activeStep]));
       let pics = JSON.parse(JSON.stringify(currentStyle.photos));

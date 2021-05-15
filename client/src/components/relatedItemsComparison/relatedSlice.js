@@ -65,7 +65,7 @@ export const fetchRelated = createAsyncThunk(
       .then((resolvedStylePromises) => {
         resolvedStylePromises.map((item, index) => {
           if (item.data[0].photos[0].thumbnail_url) {
-            itemInfo[index].photo = item.data[0].photos[0].url;
+            itemInfo[index].photo = item.data[0].photos[0].thumbnail_url;
           } else {
             itemInfo[index].photo = "/assets/imgPlaceholder.jpeg";
           }

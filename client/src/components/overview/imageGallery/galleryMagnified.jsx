@@ -30,7 +30,7 @@ const MagnifiedView = (props) => {
         dispatch(expandView(true));
       }}>
       <Zoom
-        img={currentPhoto.url}
+        img={currentPhoto.thumbnail_url}
         zoomScale={2.5}
         width={w}
         height={h}

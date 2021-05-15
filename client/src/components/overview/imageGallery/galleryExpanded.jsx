@@ -35,7 +35,7 @@ const ExpandedView = (props) => {
           <img
             alt="main product photo"
             onClick={() => dispatch(magnifyView(true))}
-            src={currentPhoto.url}
+            src={currentPhoto.thumbnail_url}
             style={{
               cursor: "crosshair",
               objectFit: "cover",

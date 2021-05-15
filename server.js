@@ -8,6 +8,10 @@ const port = 3000;
 app.use(express.json());
 app.use(express.static(path.join(__dirname, './client/dist')));
 
+app.get('/loaderio-05af34af8d85d35bff49a2f84f40d857', (req, res) => {
+  res.send('loaderio-05af34af8d85d35bff49a2f84f40d857');
+});
+
 app.get('/api/*', (req, res) => {
   let endpoint = req.url.substring(15);
   atelier.getEndpoint(endpoint, (error, products) => {

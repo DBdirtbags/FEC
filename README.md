@@ -4,6 +4,7 @@
 </p>
 
 ## Features
+- <a href="http://ec2-18-118-17-178.us-east-2.compute.amazonaws.com:3000/">Demo on AWS</a>
 - Browse available styles for a given product
 - Gallery with expanded/magnified views
 - Add to cart and add to outfit

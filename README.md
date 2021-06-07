@@ -1,5 +1,5 @@
 # FEC
-Front End Capstone: Project Catwalk
+Front End Capstone: Threads
 
 ## File Structure
 ```

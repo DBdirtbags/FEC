@@ -1,6 +1,6 @@
 <p align='center'>
-  <img src='FEC/screenshots/Screen Shot 2021-05-31 at 5.23.21 PM.png'/>
-  <img src='FEC/screenshots/Screen Shot 2021-05-31 at 5.24.27 PM.png'/>
+  <img src='screenshots/Screen Shot 2021-05-31 at 5.23.21 PM.png'/>
+  <img src='screenshots/Screen Shot 2021-05-31 at 5.24.27 PM.png'/>
 </p>
 
 ## Features
